@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_cache.c                                    :+:      :+:    :+:   */
+/*   ft_strnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alessandro <alessandro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/22 13:20:47 by adorigo           #+#    #+#             */
-/*   Updated: 2019/12/05 11:47:22 by alessandro       ###   ########.fr       */
+/*   Created: 2019/11/22 13:33:25 by adorigo           #+#    #+#             */
+/*   Updated: 2019/12/05 11:47:33 by alessandro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-
-int		free_cache(char **cache, int ret)
+ssize_t	ft_strnbr(char *s)
 {
-	if (*cache)
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		free(*cache);
-		*cache = 0;
+		if (s[i] == '\n')
+			return ((ssize_t)i);
+		i++;
 	}
-	return (ret);
+	return (-1);
 }

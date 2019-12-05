@@ -6,7 +6,7 @@
 /*   By: alessandro <alessandro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 11:05:51 by alessandro        #+#    #+#             */
-/*   Updated: 2019/12/05 11:18:36 by alessandro       ###   ########.fr       */
+/*   Updated: 2019/12/05 12:02:06 by alessandro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strnjoin(char *s1, char *s2, ssize_t r_size);
 size_t	ft_strlen(const char *src);
-int		get_next_line(int fd, char **line)
+int		get_next_line(int fd, char **line);
+ssize_t	ft_strnbr(char *s);
+int		free_cache(char **cache, int ret);
 
 #endif
